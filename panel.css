@@ -6,6 +6,7 @@
 body { margin: 0; padding: 16px; font: 14px/1.4 "Segoe UI", system-ui, sans-serif; color: var(--texto); background: var(--fondo); }
 h1 { font-size: 18px; margin: 0 0 12px; }
 h1 span { font-size: 12px; font-weight: 400; color: var(--suave); }
+[hidden] { display: none !important; }
 section { display: flex; flex-direction: column; gap: 10px; }
 label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--suave); }
 input { padding: 6px 8px; border: 1px solid var(--linea); border-radius: 4px; font: inherit; color: var(--texto); background: var(--fondo); }
