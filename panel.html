@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ofuscador</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="panel.css">
+  <script type="module" src="panel.js"></script>
+</head>
+<body>
+  <h1>Ofuscador <span>prueba</span></h1>
+
+  <section id="conectar" hidden>
+    <p>Para usarlo en Word, conéctalo con el Ofuscador de este equipo: pide un código en el Ofuscador y escríbelo aquí.</p>
+    <label>Código <input id="codigo" autocomplete="off" spellcheck="false"></label>
+    <details>
+      <summary>Puerto</summary>
+      <label>Puerto del servicio <input id="puerto" inputmode="numeric" value="8790"></label>
+    </details>
+    <button id="entrar" type="button">Conectar</button>
+  </section>
+
+  <section id="acciones" hidden>
+    <p class="nota">Las etiquetas de este documento son siempre las mismas: lo que la IA devuelva con ellas se restaura aquí.</p>
+    <button id="proteger-seleccion" type="button">Proteger la selección</button>
+    <button id="proteger-documento" type="button" class="secundario">Proteger todo el documento</button>
+    <button id="restaurar" type="button" class="secundario">Restaurar las etiquetas</button>
+    <button id="salir" type="button" class="enlace">Desconectar</button>
+  </section>
+
+  <p id="estado" role="status"></p>
+</body>
+</html>

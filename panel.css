@@ -1,0 +1,18 @@
+/* The panel of the add-in of Word: narrow, as Word gives it, in the colours of Office. */
+:root { color-scheme: light dark; --texto: #1f1f1f; --suave: #616161; --fondo: #fff; --linea: #d1d1d1; --boton: #0f6cbd; --boton-texto: #fff; --error: #b10e1c; }
+@media (prefers-color-scheme: dark) {
+  :root { --texto: #f0f0f0; --suave: #adadad; --fondo: #1f1f1f; --linea: #424242; --boton: #479ef5; --boton-texto: #000; --error: #f1707b; }
+}
+body { margin: 0; padding: 16px; font: 14px/1.4 "Segoe UI", system-ui, sans-serif; color: var(--texto); background: var(--fondo); }
+h1 { font-size: 18px; margin: 0 0 12px; }
+h1 span { font-size: 12px; font-weight: 400; color: var(--suave); }
+section { display: flex; flex-direction: column; gap: 10px; }
+label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--suave); }
+input { padding: 6px 8px; border: 1px solid var(--linea); border-radius: 4px; font: inherit; color: var(--texto); background: var(--fondo); }
+button { padding: 7px 12px; border: 1px solid var(--boton); border-radius: 4px; font: inherit; font-weight: 600; background: var(--boton); color: var(--boton-texto); cursor: pointer; }
+button.secundario { background: none; color: var(--boton); }
+button.enlace { border: none; background: none; color: var(--suave); font-weight: 400; text-decoration: underline; align-self: flex-start; padding: 0; }
+button:disabled { opacity: 0.5; cursor: default; }
+.nota, details { font-size: 13px; color: var(--suave); margin: 0; }
+#estado { margin-top: 14px; font-size: 13px; white-space: pre-wrap; }
+#estado.error { color: var(--error); }
